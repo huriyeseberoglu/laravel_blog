@@ -19,5 +19,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-@yield('css')
+    <!-- Script -->
+    <script>
+        window.laravel= <?php echo json_encode([
+                            'csrfToken' => csrf_token(),
+                        ]); ?>
+    </script>
+@stack('css')
 </head>
