@@ -1,6 +1,6 @@
 @extends('backend.layout.master')
 @section('content')
-Muhammet
+Huriye
  @endsection
 
 @push('css')

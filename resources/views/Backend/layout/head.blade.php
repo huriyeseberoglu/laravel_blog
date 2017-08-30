@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>SB Admin </title>
     <!-- Bootstrap Core CSS -->
     <link href="/storage/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
