@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Requests\Backend\UserStorageRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,13 +28,7 @@ class UserController extends Controller
         return view('Backend.users.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(UserStorageRequest $request)
     {
        dd($request ->all());
     }
