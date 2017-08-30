@@ -7,3 +7,6 @@
  */
 
 Route:: get('/dashboard', 'Backend\DashboardController');
+Route:: resources([
+        'users'  => 'Backend\UserController'
+    ]);

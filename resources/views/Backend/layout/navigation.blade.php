@@ -125,7 +125,7 @@
                 <a href="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                <a href="{{route('users.index')}}"><i class="fa fa-fw fa-bar-chart-o"></i> User</a>
             </li>
             <li>
                 <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
