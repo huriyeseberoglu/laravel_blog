@@ -126,10 +126,10 @@
             </li>
 
 
-            <li>
+            <li   @if(Request:: is ('users/*') ) class="active" @endif>
                 <a href="javascript:;" data-toggle="collapse" data-target="#users">
                     <i class="fa  fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
-                <ul id="users" class="collapse">
+                <ul id="users"  @if(Request:: is('users/*')) class=" collepse in" @else class="collepse" @endif >
                     <li>
                         <a href="{{route('users.create')}}">Create</a>
                     </li>
