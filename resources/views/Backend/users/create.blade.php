@@ -2,7 +2,7 @@
 @section('subtitle')
 <h1 class="page-header">
     Users
-    <small>Create new users</small>
+    <small> @lang('backend/user/user.userCreate')</small>
 </h1>
 @endsection
 @section('content')
