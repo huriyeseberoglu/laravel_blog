@@ -10,7 +10,7 @@
 
         <div class="form-group" {{ $errors->has('name') ? ' has-error' : '' }}>
             <label>Name</label>
-            <input name="name" class="form-control" placeholder="User's name">
+            <input name="name" class="form-control" placeholder="User's name" value="{{old('name')}}">
             @if($errors-> has('name'))
                 <p class="help-block">{{$errors ->first('name')}}</p>
             @endif
@@ -19,7 +19,7 @@
 
         <div class="form-group" {{ $errors->has('email') ? ' has-error' : '' }}>
             <label>E- Mail</label>
-            <input name="email" class="form-control" placeholder="User's  email">
+            <input name="email" class="form-control" placeholder="User's  email" value="{{old('email')}}">
             @if($errors-> has('email'))
                 <p class="help-block">{{$errors ->first('email')}}</p>
             @endif
