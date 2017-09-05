@@ -53,8 +53,9 @@ class UserController extends Controller
      */
     public function store(UserStorageRequest $request)
     {
-        $this->userContract->store($request->all());
-        return back()->withNotify('User created!');
+        $user = $this->userContract->store($request->all());
+        $message=sprintf('%s succesfuly created.' , $user->name);
+        return back()->withNotify($message);
     }
 
     /**

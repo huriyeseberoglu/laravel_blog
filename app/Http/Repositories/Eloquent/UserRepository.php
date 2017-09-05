@@ -33,6 +33,6 @@ Class UserRepository implements  UserContract
      */
  public function store($params)
  {
-  $this->user->create($params);
+   return $this->user->create($params);
  }
 }
