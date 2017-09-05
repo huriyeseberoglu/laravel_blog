@@ -49,7 +49,8 @@ class UserController extends Controller
 
     public function store(UserStorageRequest $request)
     {
-        dd($this->userContract->store($request->all()));
+        $this->userContract->store($request->all());
+        return back();
     }
 
     /**

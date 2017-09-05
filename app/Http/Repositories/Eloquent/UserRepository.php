@@ -18,15 +18,21 @@ Class UserRepository implements  UserContract
   */
  private $user;
 
+ /**
+  * UserRepository constructor.
+  * @param User $user
+     */
  public  function  __construct(User $user)
  {
 
   $this->user = $user;
  }
 
+ /**
+  * @param $params
+     */
  public function store($params)
  {
-  dd($this->user);
-  // TODO: Implement store() method.
+  $this->user->create($params);
  }
 }
