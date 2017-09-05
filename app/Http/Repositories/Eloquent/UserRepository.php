@@ -1,5 +1,8 @@
 <?php
  namespace  App\Http\Repositories\Eloquent;
+ use App\Contracts\UserContract;
+ use App\User;
+
  /**
  * Created by PhpStorm.
  * User: BanuPC
@@ -7,7 +10,23 @@
  * Time: 10:31
  */
 
-Class UserRepository
+Class UserRepository implements  UserContract
 {
 
+ /**
+  * @var User
+  */
+ private $user;
+
+ public  function  __construct(User $user)
+ {
+
+  $this->user = $user;
+ }
+
+ public function store($params)
+ {
+  dd($this->user);
+  // TODO: Implement store() method.
+ }
 }

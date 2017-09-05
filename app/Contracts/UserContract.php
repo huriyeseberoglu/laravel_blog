@@ -1,4 +1,5 @@
 <?php
+namespace  App\Contracts;
 /**
  * Created by PhpStorm.
  * User: BanuPC
@@ -8,5 +9,5 @@
 
 interface  UserContract
 {
-    
+    public function store($params);
 }

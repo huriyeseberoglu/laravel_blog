@@ -1,13 +1,32 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use App\Contracts\UserContract;
 use App\Http\Requests\Backend\UserStorageRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * Class UserController
+ * @package App\Http\Controllers\Backend
+ */
 class UserController extends Controller
 {
+    /**
+     * @var UserContract
+     */
+    private $userContract;
+
+    /**
+     * UserController constructor.
+     * @param UserContract $userContract
+     */
+    public  function __construct(UserContract  $userContract)
+    {
+
+        $this->userContract = $userContract;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -30,7 +49,7 @@ class UserController extends Controller
 
     public function store(UserStorageRequest $request)
     {
-       dd($request ->all());
+        dd($this->userContract->store($request->all()));
     }
 
     /**
