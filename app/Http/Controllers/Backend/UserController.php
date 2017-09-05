@@ -47,10 +47,14 @@ class UserController extends Controller
         return view('Backend.users.create');
     }
 
+    /**
+     * @param UserStorageRequest $request
+     * @return mixed
+     */
     public function store(UserStorageRequest $request)
     {
         $this->userContract->store($request->all());
-        return back();
+        return back()->withNotify('User created!');
     }
 
     /**
