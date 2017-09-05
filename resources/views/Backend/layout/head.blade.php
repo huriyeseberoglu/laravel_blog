@@ -27,5 +27,6 @@
                             'csrfToken' => csrf_token(),
                         ]); ?>
     </script>
+    <link href="/storage/css/pnotify.custom.min.css" rel="stylesheet">
 @stack('css')
 </head>

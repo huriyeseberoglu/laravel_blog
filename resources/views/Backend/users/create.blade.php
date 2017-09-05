@@ -8,29 +8,19 @@
 @section('content')
     <form role="form" action="{{route('users.store')}}" method="POST">
 
-        <div class="form-group" {{ $errors->has('name') ? ' has-error' : '' }}>
+        <div class="form-group">
             <label>Name</label>
             <input name="name" class="form-control" placeholder="User's name" value="{{old('name')}}">
-            @if($errors-> has('name'))
-                <p class="help-block">{{$errors ->first('name')}}</p>
-            @endif
-
         </div>
 
-        <div class="form-group" {{ $errors->has('email') ? ' has-error' : '' }}>
+        <div class="form-group" >
             <label>E- Mail</label>
             <input name="email" class="form-control" placeholder="User's  email" value="{{old('email')}}">
-            @if($errors-> has('email'))
-                <p class="help-block">{{$errors ->first('email')}}</p>
-            @endif
         </div>
 
-        <div class="form-group" {{ $errors->has('password') ? ' has-error' : '' }}>
+        <div class="form-group">
             <label>Password</label>
             <input name="password" type="password" class="form-control" placeholder="User's  password">
-            @if($errors-> has('password'))
-                <p class="help-block">{{$errors ->first('password')}}</p>
-            @endif
         </div>
 
         <button type="submit" class="btn btn-default">Submit </button>
