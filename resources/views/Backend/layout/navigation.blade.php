@@ -124,10 +124,10 @@
             <li  @if(Request:: is ('dashboard') ) class="active" @endif>
                 <a href="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
-            <li   @if(Request:: is ('users/*') ) class="active" @endif>
+            <li   @if(Request:: is ('users/*') || Request:: is ('users'))  class="active" @endif>
                 <a href="javascript:;" data-toggle="collapse" data-target="#users">
                     <i class="fa  fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
-                <ul id="users"  @if(Request:: is('users/*')) class=" collepse in" @else class="collepse" @endif >
+                <ul id="users"  @if(Request:: is('users/*')  || Request:: is ('users')) class=" collepse in" @else class="collepse" @endif >
                     <li>
                         <a href="{{route('users.create')}}">Create</a>
                     </li>

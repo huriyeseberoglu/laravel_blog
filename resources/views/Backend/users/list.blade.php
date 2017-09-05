@@ -2,7 +2,7 @@
 @section('subtitle')
     <h1 class="page-header">
         Users
-        <small>List  users</small>
+        <small> @lang('backend/user/user.userlist')</small>
     </h1>
 @endsection
 @section('content')
