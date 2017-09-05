@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'tr',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,7 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\UserRepositoryProvider::class
+        App\Providers\UserRepositoryProvider::class ,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 

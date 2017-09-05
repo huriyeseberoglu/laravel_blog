@@ -7,6 +7,6 @@
  */
 
 return[
-    'userCreate' =>'Create new users',
-    'userlist'  =>'List users'
+    'userCreate' =>'Yeni Kullancı olustur',
+    'userlist'  =>'Kullanıcıları Listele'
 ];

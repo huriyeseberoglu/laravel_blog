@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Contracts\UserContract;
+use App\DataTables\UserDataTable;
 use App\Http\Requests\Backend\UserStorageRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\App;
 
 /**
  * Class UserController
@@ -23,18 +25,12 @@ class UserController extends Controller
      */
     public  function __construct(UserContract  $userContract)
     {
-
         $this->userContract = $userContract;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(UserDataTable $dataTable)
     {
-        return view('Backend.users.list');
+        return $dataTable->render('Backend.users.list');
     }
 
     /**
