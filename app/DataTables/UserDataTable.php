@@ -54,10 +54,10 @@ class UserDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
-            // add your columns
-            'created_at',
-            'updated_at',
+            ['title' => 'Name', 'data' => 'name'],
+            ['title' => 'E-Mail', 'data' => 'email'],
+            ['title' => 'Created At', 'data' => 'created_at'],
+            ['title' => 'Updated At', 'data' => 'updated_at'],
         ];
     }
 
