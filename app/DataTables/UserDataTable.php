@@ -16,7 +16,7 @@ class UserDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', 'path.to.action.view')
+            ->addColumn('action', view('backend.common.buttons'))
             ->make(true);
     }
 
@@ -42,7 +42,7 @@ class UserDataTable extends DataTable
         return $this->builder()
                     ->columns($this->getColumns())
                     ->ajax('')
-                    ->addAction(['width' => '80px'])
+                    ->addAction(['width' => '160px', 'title' => 'Action'])
                     ->parameters($this->getBuilderParameters());
     }
 
