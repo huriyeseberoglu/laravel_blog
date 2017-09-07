@@ -50,7 +50,7 @@ class UserDataTable extends DataTable
         return $this->builder()
                     ->columns($this->getColumns())
                     ->ajax('')
-                    ->addAction(['width' => '160px', 'title' => 'Action'])
+                    ->addAction(['width' => '180px', 'title' => 'Action'])
                     ->parameters($this->getBuilderParameters());
     }
 

@@ -64,7 +64,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = $this->userContract->findOrFail($id);
-        dd($user);
+        return $user;
     }
 
     /**
