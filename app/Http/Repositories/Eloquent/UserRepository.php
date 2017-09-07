@@ -35,4 +35,13 @@ Class UserRepository implements  UserContract
  {
    return $this->user->create($params);
  }
+
+ /**
+  * @param $id
+  * @return mixed
+  */
+ public function findOrfail($id)
+ {
+    return $this->user->findOrfail($id);
+ }
 }
