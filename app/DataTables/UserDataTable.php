@@ -16,7 +16,13 @@ class UserDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', view('backend.common.buttons'))
+            ->editColumn('updated_at',  function ($user) {
+                return $user-> created_at-> diffForHumans();
+            })
+            ->editColumn('created_at',  function ($user) {
+                return $user-> created_at-> diffForHumans();
+            })
+            ->addColumn('action', view('backend.common.buttons' ,compact('user')))
             ->make(true);
     }
 
@@ -44,6 +50,17 @@ class UserDataTable extends DataTable
                     ->ajax('')
                     ->addAction(['width' => '160px', 'title' => 'Action'])
                     ->parameters($this->getBuilderParameters());
+    }
+
+    /**
+     * @return Datatables
+     */
+    public function getBuilderParameters()
+    {
+          return [
+          'dom' => 'Bfrtip',
+          'buttons' => ['csv', 'excel', 'pdf', 'print', 'reset', 'reload'],
+                  ];
     }
 
     /**
