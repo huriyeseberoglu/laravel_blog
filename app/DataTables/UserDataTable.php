@@ -22,7 +22,9 @@ class UserDataTable extends DataTable
             ->editColumn('created_at',  function ($user) {
                 return $user-> created_at-> diffForHumans();
             })
-            ->addColumn('action', view('backend.common.buttons' ,compact('user')))
+            ->addColumn('action', function ($user) {
+              return view('backend.common.buttons' ,compact('user'));
+            } )
             ->make(true);
     }
 
