@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 use App\Contracts\UserContract;
 use App\DataTables\UserDataTable;
 use App\Http\Requests\Backend\UserStorageRequest;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -60,9 +61,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        dd($user);
     }
 
     /**
