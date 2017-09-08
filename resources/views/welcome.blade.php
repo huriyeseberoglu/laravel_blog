@@ -2,19 +2,14 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Laravel</title>
-
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Courier New, Courier, monospace:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
             html, body {
-                background-color: plum;
-                color:ghostwhite;
+                background-color: black;
+                color:white;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -37,8 +32,9 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                right: 500px;
+                top: 450px;
+
             }
 
             .content {
@@ -51,16 +47,23 @@
 
             .links > a {
                 color: ghostwhite;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
+                padding: 0 20px;
+                font-size: 20px;
+                font-weight: 100;
+                letter-spacing: .2rem;
+                text-decoration: underline;
                 text-transform: uppercase;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 400px;
+                font-size: 80px;
+                         }
+            .green{
+                position: absolute;
+                right: 320px;
+                top: 350px;
+                font-size: 40px;
             }
         </style>
     </head>
@@ -76,20 +79,9 @@
                     @endif
                 </div>
             @endif
+  <div class="title m-b-md">  Hoşgeldiniz</div>
+<div class="green">Sayfaya Giriş Yapmak için Tıklayınız</div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
-        </div>
     </body>
 </html>
