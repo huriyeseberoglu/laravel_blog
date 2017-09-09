@@ -8,8 +8,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: black;
-                color:white;
+                background-color: whitesmoke;
+                color:black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -36,17 +36,12 @@
                 top: 450px;
 
             }
-
-            .content {
-                text-align: center;
-            }
-
             .title {
                 font-size: 84px;
             }
 
             .links > a {
-                color: ghostwhite;
+                color: black;
                 padding: 0 20px;
                 font-size: 20px;
                 font-weight: 100;
